@@ -1,4 +1,5 @@
 import Lane from '../models/lane';
+import Note from '../models/note';
 import uuid from 'uuid';
 
 export function addLane(req, res) {
@@ -25,6 +26,19 @@ export function getLanes(req, res) {
       res.status(500).send(err);
     }
     res.json({ lanes });
+  });
+}
+
+export function editLane(req, res) {
+  Lane.findOne({ id: req.params.laneId }).exec((err, lane) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+
+    lane.set({ name: req.body.name });
+    lane.save(() => {
+      res.status(200).end();
+    });
   });
 }
 
