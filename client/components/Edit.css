@@ -1,0 +1,21 @@
+.value {
+    padding: 10px;
+}
+
+input {
+    border: none;
+    padding: 10px;
+}
+
+.delete {
+    background-color: crimson;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+li {
+    padding: 10px;
+}

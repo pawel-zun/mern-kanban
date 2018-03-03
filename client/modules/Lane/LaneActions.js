@@ -1,5 +1,5 @@
 import callApi from '../../util/apiCaller';
-import { lanes } from '../../util/schema';
+import { lanes } from '../../../server/util/schema';
 import { normalize } from 'normalizr';
 import { createNotes } from '../Note/NoteActions';
 
@@ -9,6 +9,7 @@ export const CREATE_LANES = 'CREATE_LANES';
 export const UPDATE_LANE = 'UPDATE_LANE';
 export const DELETE_LANE = 'DELETE_LANE';
 export const EDIT_LANE = 'EDIT_LANE';
+export const MOVE_BETWEEN_LANES = 'MOVE_BETWEEN_LANES';
 
 // Export Actions
 export function createLane(lane) {
@@ -82,5 +83,14 @@ export function deleteLaneRequest(laneId) {
     return callApi(`lanes/${laneId}`, 'delete').then(() => {
       dispatch(deleteLane(laneId));
     });
+  };
+}
+
+export function moveBetweenLanes(targetLaneId, noteId, sourceLaneId) {
+  return {
+    type: MOVE_BETWEEN_LANES,
+    targetLaneId,
+    noteId,
+    sourceLaneId,
   };
 }
