@@ -34,6 +34,9 @@ export function editLane(req, res) {
     if (err) {
       res.status(500).send(err);
     }
+    if (!lane) {
+      res.status(404).end();
+    }
 
     lane.set({ name: req.body.name });
     lane.save(() => {

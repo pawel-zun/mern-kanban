@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { bindActionCreators } from 'redux';
 
 // Import Style
 import styles from './Note.css';
