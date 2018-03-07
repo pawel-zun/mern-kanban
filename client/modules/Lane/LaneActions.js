@@ -64,7 +64,6 @@ export function updateLaneRequest(lane) {
 }
 
 export function editLane(laneId) {
-  console.log(laneId);
   return {
     type: EDIT_LANE,
     laneId,
