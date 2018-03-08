@@ -23,7 +23,7 @@ const noteTarget = {
     const sourceProps = monitor.getItem();
     const { id: noteId, laneId: sourceLaneId } = sourceProps;
 
-    if (!targetProps.lane.notes.length) {
+    if (targetProps.lane.id !== sourceLaneId) {
       targetProps.moveBetweenLanes(
         targetProps.lane.id,
         noteId,

@@ -94,4 +94,3 @@ export function moveBetweenLanes(targetLaneId, noteId, sourceLaneId) {
     sourceLaneId,
   };
 }
-
