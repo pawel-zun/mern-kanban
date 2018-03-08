@@ -10,6 +10,7 @@ import { createLaneRequest, fetchLanes } from '../Lane/LaneActions';
 
 const Kanban = (props) => (
   <div>
+    <h1 className={styles.title}>Kanban App</h1>
     <button
       className={styles.AddLane}
       onClick={() => props.createLane({

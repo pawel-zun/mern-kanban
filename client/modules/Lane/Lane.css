@@ -1,12 +1,86 @@
 /* Lane styles */
-.AddLane {
+.title {
+  background-color: #74b9ff;
+  padding: 30px 20px;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
+.AddLane {
+  background-color: #00b894;
+  border: 0;
+  padding: 20px 30px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.AddLane:hover {
+  background-color: #55efc4;
+  color: #2d3436;
+  cursor: pointer;
 }
 
 .Lanes {
+  margin-top: 30px;
+  padding: 20px 10px;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  background-color: #0984e3;
 }
 
 .Lane {
-  flex-grow: 1;
+  width: 50%;
+  max-width: 280px;
+  background-color: #dfe6e9;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.LaneHeader {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.controllers {
+  margin-top: 15px;
+}
+
+.LaneAddNote {
+  background-color: #00b894;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 3px;
+}
+
+.LaneAddNote:hover {
+  background-color: #55efc4;
+  color: #2d3436;
+  cursor: pointer;
+}
+
+.LaneDelete {
+  background-color: #d63031;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 3px;
+}
+
+.LaneDelete:hover {
+  background-color: #ff7675;
+  color: #2d3436;
+  cursor: pointer;
 }
